@@ -934,10 +934,120 @@
         "body": "IniWrite(${1:Value}, ${2:Filename}, ${3:Section}, ${4:[Key]})",
         "description": "Writes a value or section to a standard format .ini file."
     },
-    "InputHook": {
+    "InputHook()": {
         "prefix": "InputHook([Options, EndKeys, MatchList])",
-        "body": "InputHook(${1:[ Options}, ${2:EndKeys}, ${3:MatchList]})",
+        "body": "InputHook(${1|Options,\u200B,\"B\",\"C\",\"In\",\"Ln\",\"M\",\"Tn\",\"V\",\"E\"|}, ${2:EndKeys}, ${3:MatchList]})",
         "description": "Creates an object which can be used to collect or intercept keyboard input."
+    },
+    "inputhook.KeyOpt()": {
+        "prefix": "inputhook.KeyOpt(Keys, KeyOptions)",
+        "body": ".KeyOpt(${1:Keys}, ${2:KeyOptions})",
+        "description": "Sets options for a key or list of keys."
+    },
+    "inputhook.Start()": {
+        "prefix": "inputhook.Start()",
+        "body": ".Start()",
+        "description": "Starts collecting input."
+    },
+    "inputhook.Wait()": {
+        "prefix": "inputhook.Wait([MaxTime])",
+        "body": ".Wait(${1|[MaxTime],\u200B|})",
+        "description": "Waits until the Input is terminated (InProgress is false)."
+    },
+    "inputhook.Stop()": {
+        "prefix": "inputhook.Stop()",
+        "body": ".Stop()",
+        "description": "Terminates the Input and sets EndReason to the word Stopped."
+    },
+    "inputhook.EndKey": {
+        "prefix": "inputhook.EndKey",
+        "body": ".EndKey",
+        "description": "Returns the name of the end key which was pressed to terminate the Input."
+    },
+    "inputhook.EndMods": {
+        "prefix": "inputhook.EndMods",
+        "body": ".EndMods",
+        "description": "Returns a string of the modifiers which were logically down when Input was terminated."
+    },
+    "inputhook.EndReason": {
+        "prefix": "inputhook.EndReason",
+        "body": ".EndReason",
+        "description": "Returns an EndReason string indicating how Input was terminated.\r\n\tStopped	The Stop method was called or Start has not yet been called for the first time.\r\n\tMax	The Input reached the maximum allowed length and it does not match any of the items in MatchList.\r\n\tTimeout	The Input timed out.\r\n\tMatch	The Input matches one of the items in MatchList. The Match property contains the matched item.\r\n\tEndKey\tOne of the EndKeys was pressed to terminate the Input.\r\n\t\tThe EndKey property contains the terminating key name or character without braces.\r\n\t[blank] If the Input is in progress, EndReason is blank."
+    },
+    "inputhook.InProgress": {
+        "prefix": "inputhook.InProgress",
+        "body": ".InProgress",
+        "description": "Returns true if the Input is in progress and false otherwise."
+    },
+    "inputhook.Input": {
+        "prefix": "inputhook.Input",
+        "body": ".Input",
+        "description": "Returns any text collected since the last time Input was started."
+    },
+    "inputhook.Match": {
+        "prefix": "inputhook.Match",
+        "body": ".Match",
+        "description": "Returns the MatchList item which caused the Input to terminate."
+    },
+    "inputhook.OnEnd": {
+        "prefix": "inputhook.OnEnd",
+        "body": ".OnEnd",
+        "description": "Retrieves or sets the function object which is called when Input is terminated."
+    },
+    "inputhook.OnChar": {
+        "prefix": "inputhook.OnChar",
+        "body": ".OnChar",
+        "description": "Retrieves or sets the function object which is called after a character is added to the input buffer."
+    },
+    "inputhook.OnKeyDown": {
+        "prefix": "inputhook.OnKeyDown",
+        "body": ".OnKeyDown",
+        "description": "Retrieves or sets the function object which is called when a notification-enabled key is pressed."
+    },
+    "inputhook.OnKeyUp": {
+        "prefix": "inputhook.OnKeyUp",
+        "body": ".OnKeyUp",
+        "description": "Retrieves or sets the function object which is called when a notification-enabled key is released."
+    },
+    "inputhook.BackspaceIsUndo": {
+        "prefix": "inputhook.BackspaceIsUndo",
+        "body": ".BackspaceIsUndo",
+        "description": "Controls whether Backspace removes the most recently pressed character from the end of the Input buffer."
+    },
+    "inputhook.CaseSensitive": {
+        "prefix": "inputhook.CaseSensitive",
+        "body": ".CaseSensitive",
+        "description": "Controls whether MatchList is case sensitive."
+    },
+    "inputhook.FindAnywhere": {
+        "prefix": "inputhook.FindAnywhere",
+        "body": ".FindAnywhere",
+        "description": "Controls whether each match can be a substring of the input text."
+    },
+    "inputhook.MinSendLevel": {
+        "prefix": "inputhook.MinSendLevel",
+        "body": ".MinSendLevel",
+        "description": "Retrieves or sets the minimum send level of input to collect."
+    },
+    "inputhook.NotifyNonText": {
+        "prefix": "inputhook.NotifyNonText",
+        "body": ".NotifyNonText",
+        "description": "Controls whether the OnKeyDown and OnKeyUp callbacks are called whenever a non-text key is pressed."
+    },
+    "inputhook.Timeout": {
+        "prefix": "inputhook.Timeout",
+        "body": ".Timeout",
+        "description": "Retrieves or sets the timeout value in seconds."
+    },
+    "inputhook.VisibleNonText": {
+        "prefix": "inputhook.VisibleNonText",
+        "body": ".VisibleNonText",
+        "description": "Controls whether keys or key combinations which do not produce text are visible (not blocked)."
+    },
+    "inputhook.VisibleText": {
+        "prefix": "inputhook.VisibleText",
+        "body": ".VisibleText",
+        "description": "Controls whether keys or key combinations which produce text are visible (not blocked)."
     },
     "InputBox": {
         "prefix": "InputBox([Prompt, Title, Options, Default])",
