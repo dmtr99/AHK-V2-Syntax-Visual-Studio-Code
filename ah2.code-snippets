@@ -138,68 +138,93 @@
         "body": "Continue",
         "description": "Skips the rest of a loop statement\"s current iteration and begins a new one."
     },
-    "ControlClick": {
-        "prefix": "ControlClick",
+    "ControlAddItem()": {
+        "prefix": "ControlAddItem(String, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlAddItem(${1:[String}, ${2:[Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Adds the specified string as a new entry at the bottom of a ListBox or ComboBox."
+    },
+    "ControlChooseIndex()": {
+        "prefix": "ControlChooseIndex(N, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlChooseIndex(${1:[N}, ${2:[Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Sets the selection in a ListBox, ComboBox or Tab control to be the specified entry or tab number."
+    },
+    "ControlChooseString()": {
+        "prefix": "ControlChooseString(String, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlChooseString(${1:[String}, ${2:[Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Sets the selection in a ListBox or ComboBox to be the first entry whose leading part matches the specified string."
+    },
+    "ControlClick()": {
+        "prefix": "ControlClick([Control-or-Pos, WinTitle, WinText, WhichButton, ClickCount, Options, ExcludeTitle, ExcludeText])",
         "body": "ControlClick(${1:[Control-or-Pos}, ${2:WinTitle}, ${3:WinText}, ${4:WhichButton}, ${5:ClickCount}, ${6:Options}, ${7:ExcludeTitle}, ${8:ExcludeText]})",
         "description": "Sends a mouse button or mouse wheel event to a control."
     },
-    "ControlFocus": {
-        "prefix": "ControlFocus",
+    "ControlDeleteItem()": {
+        "prefix": "ControlDeleteItem(N, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlDeleteItem(${1:[N}, ${2:[Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Deletes the specified entry number from a ListBox or ComboBox."
+    },
+    "ControlFindItem()": {
+        "prefix": "ControlFindItem(String, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlFindItem(${1:[String}, ${2:[Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Returns the entry number of a ListBox or ComboBox that is a complete match for the specified string."
+    },
+    "ControlFocus()": {
+        "prefix": "ControlFocus(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlFocus(${1:[Control}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
         "description": "Sets input focus to a given control on a window."
     },
-	"ControlGetChecked": {
-		"prefix": "ControlGetChecked",
+	"ControlGetChecked()": {
+		"prefix": "ControlGetChecked(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetChecked(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns a non-zero value if the checkbox or radio button is checked."
 	},
-	"ControlGetChoice": {
-		"prefix": "ControlGetChoice",
+	"ControlGetChoice()": {
+		"prefix": "ControlGetChoice(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetChoice(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns the name of the currently selected entry in a ListBox or ComboBox."
 	},
-	"ControlGetIndex": {
-		"prefix": "ControlGetIndex",
+	"ControlGetIndex()": {
+		"prefix": "ControlGetIndex(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetIndex(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns the index of the currently selected entry or tab in a ListBox, ComboBox or Tab control."
 	},
-	"ControlGetClassNN": {
-		"prefix": "ControlGetClassNN",
+	"ControlGetClassNN()": {
+		"prefix": "ControlGetClassNN(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetClassNN(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns the ClassNN (class name and sequence number) of the specified control."
 	},
-	"ControlGetFocus": {
-		"prefix": "ControlGetFocus",
+	"ControlGetFocus()": {
+		"prefix": "ControlGetFocus([WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetFocus(${1:[WinTitle}, ${2:WinText}, ${3:ExcludeTitle}, ${4:ExcludeText]})",
 		"description": "Retrieves which control of the target window has input focus, if any."
 	},
-	"ControlGetEnabled": {
-		"prefix": "ControlGetEnabled",
+	"ControlGetEnabled()": {
+		"prefix": "ControlGetEnabled(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetEnabled(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns a non-zero value if the specified control is enabled."
 	},
-	"ControlGetStyle": {
-		"prefix": "ControlGetStyle",
+	"ControlGetStyle()": {
+		"prefix": "ControlGetStyle(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetStyle(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns an integer representing the style or extended style of the specified control."
 	},
-	"ControlGetExStyle": {
-		"prefix": "ControlGetExStyle",
+	"ControlGetExStyle()": {
+		"prefix": "ControlGetExStyle(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetExStyle(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns an integer representing the style or extended style of the specified control."
 	},
-	"ControlGetHwnd": {
-		"prefix": "ControlGetHwnd",
+	"ControlGetHwnd()": {
+		"prefix": "ControlGetHwnd(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetHwnd(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns the unique ID number of the specified control."
 	},
-	"ControlGetItems": {
-		"prefix": "ControlGetItems",
+	"ControlGetItems()": {
+		"prefix": "ControlGetItems(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetItems(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
 		"description": "Returns an array of items/rows from a ListBox, ComboBox, or DropDownList."
 	},
-	"ControlGetText": {
-		"prefix": "ControlGetText",
+	"ControlGetText()": {
+		"prefix": "ControlGetText(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
 		"body": "ControlGetText(${1:OutputVar [}, ${2:Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
 		"description": "Retrieves text from a control."
 	},
@@ -208,42 +233,87 @@
         "body": "ControlGetPos(${1:[&X}, ${2:&Y}, ${3:&Width}, ${4:&Height}, ${5:Control}, ${6:WinTitle}, ${7:WinText}, ${8:ExcludeTitle})",
         "description": "Retrieves the position and size of a control."
     },
-    "ControlGetVisible": {
+    "ControlGetVisible()": {
         "prefix": "ControlGetVisible(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlGetVisible(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
         "description": "Returns a non-zero value if the specified control is visible."
     },
-    "ControlMove": {
-        "prefix": "ControlMove",
+    "ControlMove()": {
+        "prefix": "ControlMove([X, Y, Width, Height, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlMove(${1:[Control}, ${2:X}, ${3:Y}, ${4:Width}, ${5:Height}, ${6:WinTitle}, ${7:WinText}, ${8:ExcludeTitle]})",
         "description": "Moves or resizes a control."
     },
-    "ControlSend": {
+    "ControlSend()": {
         "prefix": "ControlSend(Keys [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlSend(${1:[Keys}, ${2:Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
         "description": "Sends simulated keystrokes to a window or control."
     },
-    "ControlSendText": {
-        "prefix": "ControlSendText",
+    "ControlSendText()": {
+        "prefix": "ControlSendText(Keys [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlSendText(${1:[Keys}, ${2:Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
         "description": "Sends raw simulated keystrokes to a window or control."
     },
-    "ControlSetChecked": {
-        "prefix": "ControlSetChecked",
+    "ControlSetChecked()": {
+        "prefix": "ControlSetChecked(Value, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlSetChecked(${1|true,false,-1|}, ${2:Control [}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
         "description": "Changes the text of a control."
     },
-	"ControlSetText": {
+	"ControlSetText()": {
         "prefix": "ControlSetText(NewText, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
         "body": "ControlSetText(${1:NewText}, ${2:Control [}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
         "description": "Changes the text of a control."
     },
-    "CoordMode": {
-        "prefix": "CoordMode",
-        "body": "CoordMode(${1|\"ToolTip\",\"Pixel\",\"Mouse\",\"Caret\",\"Menu\"|}, ${2|\u200B,\"Screen\",\"Relative\"|})",
+    "ControlShow()": {
+        "prefix": "ControlShow(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlShow(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Shows the specified control if it was previously hidden."
+    },
+    "ControlShowDropDown()": {
+        "prefix": "ControlShowDropDown(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ControlShowDropDown(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Shows the drop-down list of a ComboBox control."
+    },
+    "EditGetCurrentCol()": {
+        "prefix": "EditGetCurrentCol(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditGetCurrentCol(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Shows the drop-down list of a ComboBox control."
+    },
+    "EditGetCurrentLine()": {
+        "prefix": "EditGetCurrentLine(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditGetCurrentLine(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Returns the line number in an Edit control where the caret (text insert point) resides."
+    },
+    "EditGetLine()": {
+        "prefix": "EditGetLine(N [, Control, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditGetLine(${1:N[}, ${2:Control}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Returns the text of the specified line in an Edit control."
+    },
+    "EditGetLineCount()": {
+        "prefix": "EditGetLineCount(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditGetLineCount(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Returns the number of lines in an Edit control."
+    },
+    "EditGetSelectedText()": {
+        "prefix": "EditGetSelectedText(Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditGetSelectedText(${1:Control[}, ${2:WinTitle}, ${3:WinText}, ${4:ExcludeTitle}, ${5:ExcludeText]})",
+        "description": "Returns the selected text in an Edit control."
+    },
+    "EditPaste()": {
+        "prefix": "EditPaste(String, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "EditPaste(${1:String}, ${2:Control [}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Pastes the specified string at the caret (text insertion point) in an Edit control."
+    },
+    "ListViewGetContent()": {
+        "prefix": "ListViewGetContent(Options, Control [, WinTitle, WinText, ExcludeTitle, ExcludeText])",
+        "body": "ListViewGetContent(${1|Options,\u200B,\"Selected\",\"Focused\",\"Col4\",\"Count\",\"Count Selected\",\"Count Focused\",\"Count Col\"|}, ${2:Control [}, ${3:WinTitle}, ${4:WinText}, ${5:ExcludeTitle}, ${6:ExcludeText]})",
+        "description": "Returns a list of items/rows from a ListView."
+    },
+    "CoordMode()": {
+        "prefix": "CoordMode(TargetType [, RelativeTo])",
+        "body": "CoordMode(${1|\"ToolTip\",\"Pixel\",\"Mouse\",\"Caret\",\"Menu\"|}, ${2|\u200B,\"Screen\",\"Relative\",\"Client\"|})",
         "description": "Sets coordinate mode for various commands to be relative to either the active window or the screen."
     },
-    "Critical": {
+    "Critical()": {
         "prefix": "Critical(OnOffNumeric)",
         "body": "Critical(${1|OnOffNumeric,\u200b,\"On\",\"Off\"|})",
         "description": "Prevents the current thread from being interrupted by other threads, or enables it to be interrupted."
@@ -559,11 +629,25 @@
 			"Adds a Button control to the GUI window, and returns a GuiControl object."
 		]
     },
+	"GuiObj.AddDropDownList()": {
+        "prefix": "GuiObj.AddDropDownList(Options, Array)",
+        "body": ".AddDropDownList(${1|Options,\u200B,\"vName\",\"ChooseN\",\"Sort\",\"Uppercase\",\"Lowercase\",\"x+ y+\",\"r2\",\"h20 w100\",\"AltSubmit\",\"cBlue\",\"Disabled\",\"Hidden\",\"Left\",\"Right\",\"Center\",\"Section\",\"Tabstop\",\"-Wrap\",\"VScroll\",\"HScroll\",\"BackgroundTrans\",\"BackgroundColor\",\"Border\",\"Theme\"|}, ${2:Text})",
+        "description": [
+			"Adds a DropDownList control to the GUI window, and returns a GuiControl object.\r\n\t\"Choose\" Var : pre-select Var (can be number or string)\r\n\t\"Sort\" : Sort list alphabetically"
+		]
+    },
+	"GuiObj.AddComboBox()": {
+        "prefix": "GuiObj.AddComboBox(Options, Array)",
+        "body": ".AddComboBox(${1|Options,\u200B,\"vName\",\"ChooseN\",\"Sort\",\"Limit\",\"Simple\",\"Uppercase\",\"Lowercase\",\"x+ y+\",\"r2\",\"h20 w100\",\"AltSubmit\",\"cBlue\",\"Disabled\",\"Hidden\",\"Left\",\"Right\",\"Center\",\"Section\",\"Tabstop\",\"-Wrap\",\"VScroll\",\"HScroll\",\"BackgroundTrans\",\"BackgroundColor\",\"Border\",\"Theme\"|}, ${2:Text})",
+        "description": [
+			"Adds a ComboBox control to the GUI window, and returns a GuiControl object.\r\n\t\"Choose\" Var : pre-select Var (can be number or string)\r\n\t\"Limit\" : restrict the user's input to the visible width of the ComboBox's edit field\r\n\t\"Sort\" : Sort list alphabetically\r\n\t\"Simple\" : behave as though it is an Edit field with a ListBox beneath it\r\n Use GuiCtrl.Text to get the content\r\n Events: Change, Focus & LoseFocus"
+		]
+    },
 	"GuiObj.AddText()": {
         "prefix": "GuiObj.AddText(Options, Text)",
         "body": ".AddText(${1|Options,\u200B,\"vName\",\"x+ y+\",\"r2\",\"h20 w100\",\"AltSubmit\",\"cBlue\",\"Disabled\",\"Hidden\",\"Left\",\"Right\",\"Center\",\"Section\",\"Tabstop\",\"-Wrap\",\"VScroll\",\"HScroll\",\"BackgroundTrans\",\"BackgroundColor\",\"Border\",\"Theme\"|}, ${2:Text})",
         "description": [
-			"Adds a Text control to the GUI window, and returns a GuiControl object."
+			"Adds a Text control to the GUI window, and returns a GuiControl object.\r\n Events: Click & DoubleClick"
 		]
     },
 	"GuiObj.AddTreeView()": {
@@ -599,6 +683,13 @@
         "body": ".AddCheckBox(${1|Options,\u200B,\"vName\",\"x+ y+\",\"r2\",\"Checked\",\"CheckedGray\",\"Checked0\",\"Checked1\",\"Checked-1\",\"AltSubmit\",\"cBlue\",\"Disabled\",\"Hidden\",\"Left\",\"Right\",\"Center\",\"Section\",\"Tabstop\",\"-Wrap\",\"VScroll\",\"HScroll\",\"BackgroundTrans\",\"BackgroundColor\",\"Border\",\"Theme\"|}, ${2:Text})",
         "description": [
 			"Adds a CheckBox control to the GUI window, and returns a GuiControl object.\r\n\tCheck3 : to enable a third \"indeterminate\" state that displays a gray checkmark or a square instead of a black checkmark.\r\n\tChecked or CheckedGray : checked or indeterminate."
+		]
+    },
+	"GuiObj.AddRadioBox()": {
+        "prefix": "GuiObj.AddRadioBox(Options, Text)",
+        "body": ".AddRadioBox(${1|Options,\u200B,\"vName\",\"x+ y+\",\"r2\",\"Checked\",\"Checked0\",\"Checked1\",\"Checked-1\",\"AltSubmit\",\"cBlue\",\"Disabled\",\"Hidden\",\"Left\",\"Right\",\"Center\",\"Section\",\"Tabstop\",\"-Wrap\",\"VScroll\",\"HScroll\",\"BackgroundTrans\",\"BackgroundColor\",\"Border\",\"Theme\"|}, ${2:Text})",
+        "description": [
+			"A radio button is a small empty circle that can be checked (on) or unchecked (off).\r\n\tGroup : start a new group\r\n\tChecked or CheckedGray or CheckedN : checked or indeterminate."
 		]
     },
 	"GuiObj.Show()": {
@@ -743,11 +834,25 @@
 			"Retrieves or sets a custom name for the GUI window."
 		]
     },
-	"GuiCtrl.Add()": {
-        "prefix": "GuiCtrl.Add(Items)",
-        "body": ".Flash(${1:Array})",
+	"GuiCtrl.Choose()": {
+        "prefix": "GuiCtrl.Choose(Value)",
+        "body": ".Choose(${1:Value})",
         "description": [
-			"Appends list items to a ListBox, DropDownList or ComboBox, or tabs to a Tab control."
+			"Sets the selection in a ListBox, DropDownList, ComboBox, or Tab"
+		]
+    },
+	"GuiCtrl.UseTab()": {
+        "prefix": "GuiCtrl.UseTab([Value, ExactMatch := false])",
+        "body": ".UseTab(${1:Value})",
+        "description": [
+			"Value : Number or text of tab."
+		]
+    },
+	"GuiCtrl.Add()": {
+        "prefix": "GuiCtrl.Add(Array)",
+        "body": ".Add(${1:Array})",
+        "description": [
+			"Appends list items to a ListBox, DropDownList or ComboBox, or tabs to a Tab control.\r\n\tUse GuiCtrl.Choose to select an item."
 		]
     },
 	"GuiCtrl.Delete()": {
@@ -758,17 +863,24 @@
 		]
     },
 	"GuiCtrl.Value": {
-        "prefix": "GuiCtrl.Delete",
+        "prefix": "GuiCtrl.Value",
         "body": ".Value",
         "description": [
-			"Retrieves or sets the contents of a control."
+            "Picture:\r\n\tRetrievedValue is the picture's file name\r\n\tNewValue is the filename or handle.",
+            "Text:\r\n\tText/caption of the Text control.",
+            "Edit:\r\n\tCurrent content of the Edit control (without `r).",
+            "Checkbox / radio:\r\n\t1 is checked, 0 is unchecked & -1 is gray checkmark.",
+            "DateTime / MonthCal:\r\n\tDate-time stamp in YYYYMMDDHH24MISS format.",
+            "UpDown / Slider / Progress:\r\n\tCurrent position. -- and ++ may be used",
+            "Tab / DropDownList / ComboBox / ListBox:\r\n\tPosition of the selected item/tab, returns an array for a multi-select ListBox",
+            "Hotkey:\r\n\tModifiers and key name."
 		]
     },
 	"GuiCtrl.Text": {
         "prefix": "GuiCtrl.Text",
-        "body": ".Value",
+        "body": ".Text",
         "description": [
-			"Retrieves or sets the text/caption of the control."
+			"Retrieves or sets the text/caption of the control.\r\n Control types: Button, Checkbox, Edit, GroupBox, Link, Radio, Text.\r\n For a multi-select ListBox, RetrievedText is an array."
 		]
     },
 	"GuiCtrl.Redraw()": {
@@ -971,18 +1083,18 @@
         "body": "MenuObj.AddStandard()",
         "description": "Adds the standard tray menu items."
     },
-	"MenuObj.Handle)": {
+	"MenuObj.Handle": {
         "prefix": "MenuObj.Handle",
         "body": "MenuObj.Handle",
         "description": "Returns a handle to a Win32 menu (a handle of type HMENU), constructing it if necessary."
     },
-    "MenuBar": {
+    "MenuBar()": {
         "prefix": "MenuBar()",
         "body": "MenuBar()",
         "description": "Creates a new MenuBar object."
     },
-    "MenuSelect": {
-        "prefix": "MenuSelect",
+    "MenuSelect()": {
+        "prefix": "MenuSelect(WinTitle, WinText, Menu [, SubMenu1, SubMenu2, SubMenu3, SubMenu4, SubMenu5, SubMenu6, ExcludeTitle, ExcludeText])",
         "body": "MenuSelect(${1:WinTitle}, ${2:WinText}, ${3:Menu [}, ${4:SubMenu1}, ${5:SubMenu2}, ${6:SubMenu3}, ${7:SubMenu4}, ${8:SubMenu5}, ${9:SubMenu6}, ${10:ExcludeTitle}, ${11:ExcludeText ]})",
         "description": "Invokes a menu item from the menu bar of the specified window."
     },
